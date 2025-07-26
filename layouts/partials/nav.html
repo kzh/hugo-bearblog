@@ -1,7 +1,7 @@
-<a href="{{ "" | relURL }}">Home</a>
+<a href="{{ "" | relURL }}"{{ if .IsHome }} class="active"{{ end }}>Home</a>
 {{ range .Site.Menus.main }}
-<a href="{{ .URL }}">{{ .Name }}</a>
+<a href="{{ .URL }}"{{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} class="active"{{ end }}>{{ .Name }}</a>
 {{ end }}
 {{ with .Site.GetPage "/blog" }}
-<a href="{{ "blog" | relURL }}">Blog</a>
+<a href="{{ "blog" | relURL }}"{{ if eq $.Section "blog" }} class="active"{{ end }}>Blog</a>
 {{ end }}

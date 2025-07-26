@@ -56,8 +56,22 @@
       text-decoration: underline;
   }
 
+  nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      line-height: 1.5;
+  }
+
   nav a {
       margin-right: 8px;
+      padding: 2px 0;
+      display: inline-block;
+  }
+
+  nav a.active {
+      font-weight: 600;
+      text-decoration: underline;
   }
 
   strong, b {
@@ -78,6 +92,20 @@
   main {
       line-height: 1.6;
   }
+
+  main p + ul {
+      margin-top: 0.5em;
+  }
+
+  main ul {
+      margin-top: 0.5em;
+      margin-bottom: 1em;
+  }
+
+  main p {
+      margin-bottom: 0.5em;
+  }
+
 
   table {
       width: 100%;
